@@ -1,0 +1,3 @@
+f=open("ext.txt",'a')
+f.write("anaswara")
+f.close()

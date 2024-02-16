@@ -1,0 +1,9 @@
+class  Student:
+   def __init__(self,name,age):
+    self.name=name
+    self.age=age
+   def disp(self):
+    print("name:%s\n age:%d"%(self.name,self.age))
+    st1=Student("anaswara",24)
+st2=Student("anaswara",72)
+print(st2.disp())

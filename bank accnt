@@ -1,0 +1,48 @@
+class Bank:
+    def __init__(self,name,acc_no,withdraw):
+        self.name=name
+        self.acc_no=acc_no
+        self.balance=0
+        self.Withdraw=w
+    def display(self,name,acc_no):
+            print(".........Account details.....")
+            print("account holder name:",self.name)
+            print("Accont number is :",self.acc_no)
+            print()
+    def deposit(self,deposit):
+            self.dp=deposit
+            self.balance=self.balance+self.dp 
+            print("Suceess")    
+            print()
+    def Withdraw(self,w):
+          if w<self.balance:
+                self.balance=self.balance=w
+                print("Success")
+          else:
+                print("No Balance")
+name=input("enter the name")        
+acc_no=input("enter the acc_no")
+b=Bank(name,acc_no,w)
+b.display(name,acc_no)
+print("1.Deposit")
+print("2.Withdraw")
+print("3.View")
+print("4.Exit")
+while (True):
+      c=int(input("enter the choice"))
+      if c==1:
+            deposit=int(input("Amount "))
+            b.deposit(deposit)
+      elif c==2:
+            w=int(input("Amount  withdrawed"))
+            b.withdraw(w)     
+            print()
+      elif c==3:
+            print("balance",b.display())
+            print()
+      elif  c==4:
+         break
+      else:
+            print("invalid input")    
+            
+                  

@@ -1,0 +1,40 @@
+class Marksheet:
+    def __init__(self,name,mrk1,mrk2,mrk3):
+        self.Average = 0
+        self.name=name
+        self.s=0
+        self.mrk1=mrk1
+        self.mrk2=mrk2
+        self.mrk3=mrk3
+    def display(self):
+        print("............student  marksheet..........")
+        print("Name:",self.name)    
+        print("Mark1 1: ",self.mrk1)
+        print("Mark2 2: ",self.mrk2)
+        print("Mark3 3: ",self.mrk3)
+        self.s=self.mrk1+self.mrk2+self.mrk3
+        self.average=self.s/3
+        print("Average score: ",self.average)
+
+        if self.Average >= 95:
+           print("Grade","A+")
+        elif self.Average >= 90:
+          print("Grade","A")
+        elif self.Average >= 80:
+            print("Grade","B+")
+        elif self.Average >= 70:
+           print("Grade","B") 
+        elif self.Average >= 60:
+           print("Grade","C+") 
+        elif self.Average >=50:
+           print("Grade","C") 
+        elif self.Average >=40:
+           print("Grade","D") 
+        else:
+         print("Grade:","F")
+stdname=str(input("Name:"))
+mark1=float(input("Mark 1:"))
+mark2=float(input("Mark 2:"))
+mark3=float(input("Mark 3:"))
+m=Marksheet(stdname,mark1,mark2,mark3)
+m.display()
