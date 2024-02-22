@@ -1,29 +1,30 @@
 class Bank:
-    def __init__(self,name,acc_no,withdraw):
+    def __init__(self,name,acc_no):
         self.name=name
         self.acc_no=acc_no
         self.balance=0
-        self.Withdraw=w
-    def display(self,name,acc_no):
+    def display(self):
             print(".........Account details.....")
             print("account holder name:",self.name)
             print("Accont number is :",self.acc_no)
             print()
     def deposit(self,deposit):
             self.dp=deposit
-            self.balance=self.balance+self.dp 
-            print("Suceess")    
+            self.balance+=self.dp 
+            print("Suceessfully deposited")    
             print()
     def Withdraw(self,w):
           if w<self.balance:
-                self.balance=self.balance=w
-                print("Success")
+                self.balance=self.balance-w
+                print(" withdraw Successfully")
           else:
                 print("No Balance")
-name=input("enter the name")        
-acc_no=input("enter the acc_no")
-b=Bank(name,acc_no,w)
-b.display(name,acc_no)
+    def amount_display(self):
+          return self.balance
+name=str(input("enter the  account holder name :"))    
+acc_no=int(input("enter the account number :"))
+b=Bank(name,acc_no)
+b.display()
 print("1.Deposit")
 print("2.Withdraw")
 print("3.View")
@@ -31,15 +32,14 @@ print("4.Exit")
 while (True):
       c=int(input("enter the choice"))
       if c==1:
-            deposit=int(input("Amount "))
+            deposit=int(input(" enter the Amount "))
             b.deposit(deposit)
+            print()
       elif c==2:
             w=int(input("Amount  withdrawed"))
             b.withdraw(w)     
-            print()
       elif c==3:
-            print("balance",b.display())
-            print()
+            print("balance",b.amount_display())
       elif  c==4:
          break
       else:
